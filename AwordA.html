@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Words</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: lightpink;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .word-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .word-layer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 15px;
+    }
+
+    .word {
+      width: 200px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      background-color: #ff66b2;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      border: 4px solid white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .word:hover {
+      transform: scale(1.1);
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ff66b2;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="word-container">
+    <!-- Layer 1 -->
+    <div class="word-layer">
+      <div class="word" onclick="playSound('A.m4a')">Apple</div>
+      <div class="word" onclick="playSound('sounds/ant.mp4')">Ant</div>
+      <div class="word" onclick="playSound('sounds/airplane.mp4')">Airplane</div>
+      <div class="word" onclick="playSound('sounds/arrow.mp4')">Arrow</div>
+      <div class="word" onclick="playSound('sounds/ball.mp4')">Ball</div>
+    </div>
+
+    <!-- Layer 2 -->
+    <div class="word-layer">
+      <div class="word" onclick="playSound('sounds/bear.mp4')">Bear</div>
+      <div class="word" onclick="playSound('sounds/book.mp4')">Book</div>
+      <div class="word" onclick="playSound('sounds/banana.mp4')">Banana</div>
+      <div class="word" onclick="playSound('sounds/cat.mp4')">Cat</div>
+      <div class="word" onclick="playSound('sounds/car.mp4')">Car</div>
+    </div>
+
+    <!-- Layer 3 -->
+    <div class="word-layer">
+      <div class="word" onclick="playSound('sounds/chair.mp4')">Chair</div>
+      <div class="word" onclick="playSound('sounds/clock.mp4')">Clock</div>
+      <div class="word" onclick="playSound('sounds/dog.mp4')">Dog</div>
+      <div class="word" onclick="playSound('sounds/duck.mp4')">Duck</div>
+      <div class="word" onclick="playSound('sounds/dolphin.mp4')">Dolphin</div>
+    </div>
+
+    <!-- Layer 4 -->
+    <div class="word-layer">
+      <div class="word" onclick="playSound('sounds/elephant.mp4')">Elephant</div>
+      <div class="word" onclick="playSound('sounds/eagle.mp4')">Eagle</div>
+      <div class="word" onclick="playSound('sounds/eggplant.mp4')">Eggplant</div>
+      <div class="word" onclick="playSound('sounds/eleven.mp4')">Eleven</div>
+      <div class="word" onclick="playSound('sounds/envelope.mp4')">Envelope</div>
+    </div>
+  </div>
+
+  <a href="javascript:history.back()" class="back-button">Back</a>
+
+  <script>
+    // Function to play the sound
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Words Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column; /* Align buttons vertically */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: lightpink;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column; /* Align buttons vertically */
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    button {
+      margin: 15px;
+      padding: 20px; /* Adjusted padding for a balanced appearance */
+      font-size: 100px; /* Reduced font size */
+      cursor: pointer;
+      background-color: #E75480; /* Dark pink background color */
+      color: white;
+      border: 10px solid white; /* White border */
+      border-radius: 15px; /* Increased border radius for rounded corners */
+      width: 100%; /* Adjusted width */
+      box-sizing: border-box; /* Include padding and border in the total width */
+    }
+
+    .back-button {
+      margin-top: 10px; /* Adjusted top margin for spacing */
+      margin-right: 10px; /* Add some margin for spacing */
+      padding: 10px; /* Adjusted padding for a balanced appearance */
+      font-size: 30px; /* Reduced font size */
+      cursor: pointer;
+      background-color: #E75480; /* Dark pink background color */
+      color: white;
+      border: 2px solid white; /* White border */
+      border-radius: 15px; /* Increased border radius for rounded corners */
+      width: auto; /* Set width to auto for adjustability */
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <!-- Easy Button -->
+    <button onclick="chooseDifficulty('Easy')">EASY</button>
+
+    <!-- Average Button -->
+    <button onclick="chooseDifficulty('Average')">AVERAGE</button>
+
+    <!-- Difficult Button -->
+    <button onclick="chooseDifficulty('Difficult')">DIFFICULT</button>
+
+    <!-- Back Button -->
+    <button class="back-button" id="adjustableBackButton" onclick="goBack()">Back</button>
+  </div>
+
+  <script>
+    // Choose difficulty and navigate to the corresponding page
+    function chooseDifficulty(difficulty) {
+      if (difficulty === 'Easy') {
+        window.location.href = 'AwordE.html'; // Change 'easy.html' to the actual page for Easy difficulty
+      } else if (difficulty === 'Average') {
+        window.location.href = 'AwordA.html'; // Change 'average.html' to the actual page for Average difficulty
+      } else if (difficulty === 'Difficult') {
+        window.location.href = 'AwordD.html'; // Change 'difficult.html' to the actual page for Difficult difficulty
+      }
+    }
+
+    // Go back to the previous page
+    function goBack() {
+      window.history.back();
+    }
+
+    // Adjust the width of the back button
+    document.getElementById('adjustableBackButton').style.width = '150px'; // Set your desired width here
+  </script>
+</body>
+</html>

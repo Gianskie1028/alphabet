@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alphabet</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .next-page {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: lightpink;
+      overflow: hidden;
+    }
+
+    .background-design {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .background-design img {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .letter-box-container {
+      border: 5px solid #c4004b;
+      border-radius: 20px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .layer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .letter-box {
+      width: 100px;
+      height: 100px;
+      border: 2px solid;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 15px;
+    }
+
+    /* Assigning different background colors to each letter box */
+    .letter-box[data-letter='A'] { background-color: #FF66B2; border-color: #BF0041; }
+    .letter-box[data-letter='B'] { background-color: #FF9566; border-color: #D66A3C; }
+    .letter-box[data-letter='C'] { background-color: #FFC766; border-color: #C4973C; }
+    .letter-box[data-letter='D'] { background-color: #C4FF66; border-color: #7FBF3C; }
+    .letter-box[data-letter='E'] { background-color: #66FFD9; border-color: #3CA6A6; }
+    .letter-box[data-letter='F'] { background-color: #668DFF; border-color: #3C5FA6; }
+    .letter-box[data-letter='G'] { background-color: #D566FF; border-color: #803CA6; }
+    .letter-box[data-letter='H'] { background-color: #FF66B2; border-color: #BF0041; }
+    .letter-box[data-letter='I'] { background-color: #FF9566; border-color: #D66A3C; }
+    .letter-box[data-letter='J'] { background-color: #FFC766; border-color: #C4973C; }
+    .letter-box[data-letter='K'] { background-color: #C4FF66; border-color: #7FBF3C; }
+    .letter-box[data-letter='L'] { background-color: #66FFD9; border-color: #3CA6A6; }
+    .letter-box[data-letter='M'] { background-color: #668DFF; border-color: #3C5FA6; }
+    .letter-box[data-letter='N'] { background-color: #D566FF; border-color: #803CA6; }
+    .letter-box[data-letter='O'] { background-color: #FF66B2; border-color: #BF0041; }
+    .letter-box[data-letter='P'] { background-color: #FF9566; border-color: #D66A3C; }
+    .letter-box[data-letter='Q'] { background-color: #FFC766; border-color: #C4973C; }
+    .letter-box[data-letter='R'] { background-color: #C4FF66; border-color: #7FBF3C; }
+    .letter-box[data-letter='S'] { background-color: #66FFD9; border-color: #3CA6A6; }
+    .letter-box[data-letter='T'] { background-color: #668DFF; border-color: #3C5FA6; }
+    .letter-box[data-letter='U'] { background-color: #D566FF; border-color: #803CA6; }
+    .letter-box[data-letter='V'] { background-color: #FF66B2; border-color: #BF0041; }
+    .letter-box[data-letter='W'] { background-color: #FF9566; border-color: #D66A3C; }
+    .letter-box[data-letter='X'] { background-color: #FFC766; border-color: #C4973C; }
+    .letter-box[data-letter='Y'] { background-color: #C4FF66; border-color: #7FBF3C; }
+    .letter-box[data-letter='Z'] { background-color: #66FFD9; border-color: #3CA6A6; }
+
+    .letter-box:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Next Page -->
+  <div class="next-page">
+    <div class="background-design">
+     
+      <!-- Add more alphabet images as needed -->
+    </div>
+    <div class="letter-box-container">
+      <!-- First Layer -->
+      <div class="layer">
+        <div class="letter-box" onclick="showWords('A')" data-letter="A">A</div>
+        <div class="letter-box" onclick="showWords('B')" data-letter="B">B</div>
+        <div class="letter-box" onclick="showWords('C')" data-letter="C">C</div>
+        <div class="letter-box" onclick="showWords('D')" data-letter="D">D</div>
+        <div class="letter-box" onclick="showWords('E')" data-letter="E">E</div>
+        <div class="letter-box" onclick="showWords('F')" data-letter="F">F</div>
+        <div class="letter-box" onclick="showWords('G')" data-letter="G">G</div>
+      </div>
+      <!-- Second Layer -->
+      <div class="layer">
+        <div class="letter-box" onclick="showWords('H')" data-letter="H">H</div>
+        <div class="letter-box" onclick="showWords('I')" data-letter="I">I</div>
+        <div class="letter-box" onclick="showWords('J')" data-letter="J">J</div>
+        <div class="letter-box" onclick="showWords('K')" data-letter="K">K</div>
+        <div class="letter-box" onclick="showWords('L')" data-letter="L">L</div>
+        <div class="letter-box" onclick="showWords('M')" data-letter="M">M</div>
+        <div class="letter-box" onclick="showWords('N')" data-letter="N">N</div>
+      </div>
+      <!-- Third Layer -->
+      <div class="layer">
+        <div class="letter-box" onclick="showWords('O')" data-letter="O">O</div>
+        <div class="letter-box" onclick="showWords('P')" data-letter="P">P</div>
+        <div class="letter-box" onclick="showWords('Q')" data-letter="Q">Q</div>
+        <div class="letter-box" onclick="showWords('R')" data-letter="R">R</div>
+        <div class="letter-box" onclick="showWords('S')" data-letter="S">S</div>
+        <div class="letter-box" onclick="showWords('T')" data-letter="T">T</div>
+        <div class="letter-box" onclick="showWords('U')" data-letter="U">U</div>
+      </div>
+      <!-- Fourth Layer -->
+      <div class="layer">
+        <div class="letter-box" onclick="showWords('V')" data-letter="V">V</div>
+        <div class="letter-box" onclick="showWords('W')" data-letter="W">W</div>
+        <div class="letter-box" onclick="showWords('X')" data-letter="X">X</div>
+        <div class="letter-box" onclick="showWords('Y')" data-letter="Y">Y</div>
+        <div class="letter-box" onclick="showWords('Z')" data-letter="Z">Z</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showWords(letter) {
+      // Define different URLs for each letter
+      var letterURLs = {
+        'A': 'A.html',
+        'B': 'big.html',
+        'C': 'C.html',
+        'D': 'D.html',
+        'E': 'E.html',
+        'F': 'F.html',
+        'G': 'G.html',
+        'H': 'H.html',
+        'I': 'I.html',
+        'J': 'J.html',
+        'K': 'K.html',
+        'L': 'L.html',
+        'M': 'M.html',
+        'N': 'N.html',
+        'O': 'O.html',
+        'P': 'P.html',
+        'Q': 'Q.html',
+        'R': 'R.html',
+        'S': 'S.html',
+        'T': 'T.html',
+        'U': 'U.html',
+        'V': 'V.html',
+        'W': 'W.html',
+        'X': 'X.html',
+        'Y': 'Y.html',
+        'Z': 'Z.html'
+      };
+
+      // Get the URL for the clicked letter
+      var letterURL = letterURLs[letter];
+
+      // Redirect to the corresponding page
+      if (letterURL) {
+        window.location.href = letterURL;
+      } else {
+        // Default to a generic page if the letter doesn't have a specific URL
+        window.location.href = 'generic.html?letter=' + letter;
+      }
+    }
+  </script>
+
+</body>
+</html>

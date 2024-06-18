@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPHA WORD HUB</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: lightpink;
+    }
+
+    .front-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Center-align titles and button */
+      flex-grow: 1;
+    }
+
+    .title-layer1,
+    .title-layer2,
+    .title-layer3 {
+      color: white;
+      text-shadow: 10px 10px 2px #ff66b2;
+      border-radius: 15px;
+    }
+
+    .title-layer1 {
+      font-size: 10vw;
+      margin-bottom: -100px;
+    }
+
+    .title-layer2 {
+      font-size: 10vw;
+      margin-bottom: -100px;
+    }
+
+    .title-layer3 {
+      font-size: 9vw;
+    }
+
+    .start-button {
+      margin-top: -40px;
+      padding: 15px 30px; /* Increased padding for a larger button */
+      font-size: 35px; /* Increased font size for the button */
+      background-color: #ff66b2;
+      color: white;
+      text-decoration: none;
+      border: 3px solid white; /* White border around the button */
+      cursor: pointer;
+      border-radius: 8px; /* Rounded corners for the button */
+    }
+
+    .image-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 20px;
+    }
+
+    .custom-image {
+      max-width: 130%;
+      max-height: 130%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Image Container on the Left -->
+  <div class="image-container">
+    <img src="aso.png" alt="Custom Image" class="custom-image">
+  </div>
+
+  <!-- Front Page -->
+  <div class="front-page">
+    <h1 class="title-layer1">ALPHA</h1>
+    <h1 class="title-layer2">WORD</h1>
+    <h1 class="title-layer3">HUB</h1>
+    <button onclick="showAlphabet()" class="start-button">BEGIN</button>
+  </div>
+
+  <script>
+    function showAlphabet() {
+      window.location.href = 'letters.html';
+    }
+  </script>
+
+</body>
+
+</html>
